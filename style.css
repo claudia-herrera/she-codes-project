@@ -1,0 +1,48 @@
+.container {
+  background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+}
+
+h1 {
+  font-family: "Alfa Slab One", cursive;
+  text-align: center;
+}
+h2 {
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+h5,
+h3 {
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+  color: saddlebrown;
+  font-weight: 200;
+}
+
+.current-weather {
+  text-align: center;
+  padding-top: 20px;
+}
+.weather-now {
+  padding-bottom: 30px;
+  padding-top: 20px;
+}
+
+img {
+  width: 120px;
+}
+
+.card-img-top {
+  width: 150px;
+  height: 140px;
+}
+
+.footer {
+  padding: 20px;
+  text-align: center;
+}
+
+.temperature {
+  font-size: 64px;
+}
