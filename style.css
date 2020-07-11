@@ -1,48 +1,70 @@
-.container {
-  background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+.weather-app {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #000000;
+  border-radius: 10px;
 }
-
-h1 {
-  font-family: "Alfa Slab One", cursive;
-  text-align: center;
-}
-h2 {
-  font-family: "Oswald", sans-serif;
-  font-size: 20px;
-  font-weight: 300;
-}
-
-h5,
-h3 {
-  font-family: "Oswald", sans-serif;
-  text-align: center;
-  color: saddlebrown;
-  font-weight: 200;
+.weather-app-wrapper {
+  max-width: 600px;
+  margin: 30px auto;
 }
 
 .current-weather {
-  text-align: center;
-  padding-top: 20px;
-}
-.weather-now {
-  padding-bottom: 30px;
-  padding-top: 20px;
+  margin-bottom: 20px;
 }
 
-img {
-  width: 120px;
+.weather-temperature img {
+  margin-right: 10px;
+  height: 64px;
+  width: 64px;
 }
-
-.card-img-top {
-  width: 150px;
-  height: 140px;
-}
-
-.footer {
-  padding: 20px;
-  text-align: center;
-}
-
-.temperature {
+.weather-temperature strong {
+  color: red;
   font-size: 64px;
+  line-height: 1;
+}
+
+.weather-temperature .units {
+  position: relative;
+  top: -34px;
+}
+
+.daily-forecast {
+  text-align: center;
+  margin-top: 15px;
+  font-weight: 200;
+}
+.daily-forecast img {
+  height: 50px;
+  width: 50px;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+}
+h1 {
+  font-size: 24px;
+  color: #000000;
+  line-height: 28px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  color: #000000;
+  line-height: 19px;
+}
+
+li:first-letter {
+  text-transform: capitalize;
 }

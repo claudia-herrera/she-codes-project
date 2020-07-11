@@ -2,12 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
-        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link
-      href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Oswald:wght@500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
     <link
@@ -16,114 +14,124 @@
       integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
       crossorigin="anonymous"
     />
- 
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container">
-      <div class="form-row align-items-center">
-        <div class="col-3"></div>
-        <div class="col-6 title">
-          <h1>Weather App</h1>
-        </div>
-        <div class="col-3 justify-content-end align-items-right">
-          <form id="city-form">
-            <input type="city" placeholder="City" id="city-text-input" />
-            <button type="button" class="btn btn-sm btn-outline-secondary">
-              Search
-            </button>
-            <button type="button" class="btn btn-sm btn-outline-secondary">
-              Current
-            </button>
-          </form>
-        </div>
-      </div>
-
-      <div class="row current-weather">
-        <div class="col-12 align-items-center">
-          <h2 id="citySearched">
-            Los Angeles</h2>
-          <h2 id="date-display">Sunday 9:00AM
-          
-          </h2>
-          <div class="row weather-now">
-            <div class="col-12 align-items-center">
-              <img src="images/Overcast.png" />
-              <span class="temperature" id="temperature">75°</span> 
-              <a href="#" id="celsius-link">°C </a> | 
-              <a href="#" id="farenheit-link">°F</a>
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
+          <div class="form">
+            <form class="mb-3" id="city-form">
+              <div class="row">
+                <div class="col-9">
+                  <label for="input" class="sr-only">City</label>
+                  <input
+                    type="search"
+                    class="form-control"
+                    id="city-text-input"
+                    placeholder="City"
+                  />
+                </div>
+                <div class="col-3">
+                  <button type="submit" class="btn btn-primary mb-2">
+                    Search
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div
+            class="current-weather"
+            style="background-image: url('images/sunny.png');"
+          >
+            <h1 class="city_element" id="citySearched">
+              Los Angeles
+            </h1>
+            <ul>
+              <li id="date-display">
+                Friday 3:14pm
+              </li>
+              <li id="weather-description">
+                Sunny
+              </li>
+            </ul>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <div class="clearfix weather-temperature">
+                <img
+                  src="images/sunny.png"
+                  alt="weather image"
+                  class="float-left"
+                  id="currentTempIcon"
+                />
+                <div class="float-left">
+                  <strong id="temperature">75</strong>
+                  <span class="units"
+                    ><a href="#" id="celsiusLink" class="active">°C</a> |
+                    <a href="#" id="farenheitLink">°F</a>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <ul>
+                <li>Humidity: <span id="humidity"></span></li>
+                <li>Wind <span id="speed"></span>km/h</li>
+              </ul>
+            </div>
+          </div>
+          <div class="row daily-forecast" id="daily-forecast">
+            <div class="col-2">
+              <span id="dayOne"></span>
+              <img src="images/sunny.png" alt="day1" id="dayOneImg" /><span
+                id="dayOneTemp"
+                >75°</span
+              >
+            </div>
+            <div class="col-2">
+              <span id="dayTwo"></span>
+              <img src="images/sunny.png" alt="day2" id="dayTwoImg" /><span
+                id="dayTwoTemp"
+                >75°</span
+              >
+            </div>
+            <div class="col-2">
+              <span id="dayThree"></span>
+              <img src="images/sunny.png" alt="day3" id="dayThreeImg" /><span
+                id="dayThreeTemp"
+                >75°</span
+              >
+            </div>
+            <div class="col-2">
+              <span id="dayFour"></span
+              ><img src="images/sunny.png" alt="day4" id="dayFourImg" /><span
+                id="dayFourTemp"
+                >75°</span
+              >
+            </div>
+            <div class="col-2">
+              <span id="dayFive"></span
+              ><img src="images/sunny.png" alt="day5" id="dayFiveImg" /><span
+                id="dayFiveTemp"
+                >75°</span
+              >
+            </div>
+            <div class="col-2">
+              <span id="daySix"></span
+              ><img src="images/sunny.png" alt="day6" id="daySixImg" /><span
+                id="daySixTemp"
+                >75°</span
+              >
             </div>
           </div>
         </div>
-      </div>
-      <hr>
-      <div class="row">
-        <div class="col">
-          <div class="card day-1">
-            <h5 class="card-title">73° | 61°</h5>
-
-            <div class="card-body">
-              <img src="images/SunCloud.png" class="card-img-top" alt="..." />
-              <p class="card-text">
-               <h3>MON</h3> 
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card day-2">
-            <h5 class="card-title">72° | 63°</h5>
-
-            <div class="card-body">
-              <img src="images/SunCloud.png" class="card-img-top" alt="..." />
-              <p class="card-text">
-                <h3>TUE</h3>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card day-3">
-            <h5 class="card-title">75° | 62°</h5>
-
-            <div class="card-body">
-              <img src="images/sunny.png" class="card-img-top" alt="..." />
-              <p class="card-text">
-               <h3>WED</h3> 
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card day-4">
-            <h5 class="card-title">71° | 61°</h5>
-
-            <div class="card-body">
-              <img src="images/Overcast.png" class="card-img-top" alt="..." />
-              <p class="card-text">
-                <h3>THUR</h3>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card day-5">
-            <h5 class="card-title">68° | 61°</h5>
-
-            <div class="card-body">
-              <img src="images/Overcast.png" class="card-img-top" alt="..." />
-              <p class="card-text">
-                <h3>FRI</h3>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row footer">
-          <div class="col-12">
-              Created by Claudia Herrera - <a href="https://github.com/claudia-herrera/she-codes-project">GitHub Project </a>
-          </div>
+        <small>
+          <a href="#" target="blank"></a>This page was created by Claudia
+          Herrera
+        </small>
       </div>
     </div>
   </body>
- <script src="js-data.js"></script>
+  <script src="js-data.js"></script>
 </html>
