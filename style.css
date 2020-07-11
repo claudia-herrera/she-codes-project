@@ -20,7 +20,7 @@
   width: 64px;
 }
 .weather-temperature strong {
-  color: red;
+  color: black;
   font-size: 64px;
   line-height: 1;
 }
@@ -36,8 +36,8 @@
   font-weight: 200;
 }
 .daily-forecast img {
-  height: 50px;
-  width: 50px;
+  height: 64px;
+  width: 64px;
 }
 
 body {

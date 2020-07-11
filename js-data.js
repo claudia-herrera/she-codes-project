@@ -64,6 +64,12 @@ function sixDayForecast(response) {
   let dayFourTemp = document.querySelector("#dayFourTemp");
   let dayFiveTemp = document.querySelector("#dayFiveTemp");
   let daySixTemp = document.querySelector("#daySixTemp");
+  let dayOneIcon = document.querySelector("#dayOneImg");
+  let dayTwoIcon = document.querySelector("#dayTwoImg");
+  let dayThreeIcon = document.querySelector("#dayThreeImg");
+  let dayFourIcon = document.querySelector("#dayFourImg");
+  let dayFiveIcon = document.querySelector("#dayFiveImg");
+  let daySixIcon = document.querySelector("#daySixImg");
   let forecastOne = response.data.list[0];
   let forecastTwo = response.data.list[1];
   let forecastThree = response.data.list[2];
@@ -100,6 +106,32 @@ function sixDayForecast(response) {
   daySixTemp.innerHTML = `<strong>${Math.round(
     forecastSix.main.temp_max
   )}°</strong> | ${Math.round(forecastSix.main.temp_min)}°`;
+
+  dayOneIcon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${forecastOne.weather[0].icon}@2x.png`
+  );
+
+  dayTwoIcon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${forecastTwo.weather[0].icon}@2x.png`
+  );
+  dayThreeIcon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${forecastThree.weather[0].icon}@2x.png`
+  );
+  dayFourIcon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${forecastFour.weather[0].icon}@2x.png`
+  );
+  dayFiveIcon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${forecastFive.weather[0].icon}@2x.png`
+  );
+  daySixIcon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${forecastSix.weather[0].icon}@2x.png`
+  );
 }
 function search(city) {
   let apiKey = "55b97e6fc2cb7988f72fb6de6b7eef45";
