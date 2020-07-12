@@ -16,10 +16,12 @@ function formatDate(timestamp) {
 
 function formatHours(timestamp) {
   let date = new Date(timestamp);
+
   let hour = date.getHours();
   if (hour < 10) {
     hour = `0${hour}`;
   }
+
   let minutes = date.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
@@ -45,6 +47,7 @@ function showTemperature(response) {
   speedElement.innerHTML = Math.round(response.data.wind.speed);
 
   currentDate.innerHTML = formatDate(response.data.dt * 1000);
+
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
@@ -161,6 +164,25 @@ function showFarenheitTemp(event) {
   tempElement.innerHTML = Math.round(displayFarenheit);
 }
 
+function changeBackground(timestamp) {
+  let date = new Date(timestamp);
+
+  let background = date.getHours();
+  if (background < 7) {
+    background = document.getElementById(
+      "appBackground"
+    ).style.backgroundImage = "url(images/appWeatherBackground.jpeg)";
+  } else if (background < 17) {
+    background = document.getElementById(
+      "appBackground"
+    ).style.backgroundImage = "url(images/daytimeBackground.jpeg)";
+  } else {
+    background = document.getElementById(
+      "appBackground"
+    ).style.backgroundImage = "url(images/appWeatherBackground.jpeg)";
+  }
+}
+
 let celsiusTemperature = null;
 let searchForm = document.querySelector("#city-form");
 searchForm.addEventListener("submit", cityLookup);
@@ -172,3 +194,4 @@ let celsiusLink = document.querySelector("#celsiusLink");
 celsiusLink.addEventListener("click", showCelsiusTemp);
 
 search("Los Angeles");
+changeBackground("8");

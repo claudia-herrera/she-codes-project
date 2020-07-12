@@ -19,7 +19,11 @@
   <body>
     <div class="container">
       <div class="weather-app-wrapper">
-        <div class="weather-app">
+        <div
+          class="weather-app"
+          style="background-image: url('images/daytimeBackground.jpeg');"
+          id="appBackground"
+        >
           <div class="form">
             <form class="mb-3" id="city-form">
               <div class="row">
@@ -40,89 +44,89 @@
               </div>
             </form>
           </div>
-          <div
-            class="current-weather"
-            style="background-image: url('images/sunny.png');"
-          >
-            <h1 class="city_element" id="citySearched">
-              Los Angeles
-            </h1>
-            <ul>
-              <li id="date-display">
-                Friday 3:14pm
-              </li>
-              <li id="weather-description">
-                Sunny
-              </li>
-            </ul>
-          </div>
-          <div class="row">
-            <div class="col-6">
-              <div class="clearfix weather-temperature">
-                <img
-                  src="images/sunny.png"
-                  alt="weather image"
-                  class="float-left"
-                  id="currentTempIcon"
-                />
-                <div class="float-left">
-                  <strong id="temperature">75</strong>
-                  <span class="units"
-                    ><a href="#" id="celsiusLink" class="active">°C</a> |
-                    <a href="#" id="farenheitLink">°F</a>
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div class="col-6">
+          <div class="transbox">
+            <div class="current-weather">
+              <h1 class="city_element" id="citySearched">
+                Los Angeles
+              </h1>
               <ul>
-                <li>Humidity: <span id="humidity"></span></li>
-                <li>Wind <span id="speed"></span>km/h</li>
+                <li id="date-display">
+                  Friday 3:14pm
+                </li>
+                <li id="weather-description">
+                  Sunny
+                </li>
               </ul>
             </div>
-          </div>
-          <div class="row daily-forecast" id="daily-forecast">
-            <div class="col-2">
-              <span id="dayOne">Here</span>
-              <img src="images/sunny.png" alt="day1" id="dayOneImg" /><span
-                id="dayOneTemp"
-                >75°</span
-              >
+            <div class="row">
+              <div class="col-6">
+                <div class="clearfix weather-temperature">
+                  <img
+                    src="images/sunny.png"
+                    alt="weather image"
+                    class="float-left"
+                    id="currentTempIcon"
+                  />
+                  <div class="float-left">
+                    <strong id="temperature">75</strong>
+                    <span class="units"
+                      ><a href="#" id="celsiusLink" class="active">°C</a> |
+                      <a href="#" id="farenheitLink">°F</a>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 tempDetails">
+                <ul>
+                  <li>Humidity: <span id="humidity"></span>%</li>
+                  <li>Wind: <span id="speed"></span>km/h</li>
+                </ul>
+              </div>
             </div>
-            <div class="col-2">
-              <span id="dayTwo"></span>
-              <img src="images/sunny.png" alt="day2" id="dayTwoImg" /><span
-                id="dayTwoTemp"
-                >75°</span
-              >
-            </div>
-            <div class="col-2">
-              <span id="dayThree"></span>
-              <img src="images/sunny.png" alt="day3" id="dayThreeImg" /><span
-                id="dayThreeTemp"
-                >75°</span
-              >
-            </div>
-            <div class="col-2">
-              <span id="dayFour"></span
-              ><img src="images/sunny.png" alt="day4" id="dayFourImg" /><span
-                id="dayFourTemp"
-                >75°</span
-              >
-            </div>
-            <div class="col-2">
-              <span id="dayFive"></span
-              ><img src="images/sunny.png" alt="day5" id="dayFiveImg" /><span
-                id="dayFiveTemp"
-                >75°</span
-              >
-            </div>
-            <div class="col-2">
-              <span id="daySix"></span
-              ><img src="images/sunny.png" alt="day6" id="daySixImg" /><span
-                id="daySixTemp"
-                >75°</span
-              >
+            <div class="forecastHeader">Today's Weather</div>
+            <div class="row daily-forecast" id="daily-forecast">
+              <div class="col-2">
+                <span id="dayOne">Here</span>
+                <img src="images/sunny.png" alt="day1" id="dayOneImg" /><span
+                  id="dayOneTemp"
+                  >75°</span
+                >
+              </div>
+              <div class="col-2">
+                <span id="dayTwo"></span>
+                <img src="images/sunny.png" alt="day2" id="dayTwoImg" /><span
+                  id="dayTwoTemp"
+                  >75°</span
+                >
+              </div>
+              <div class="col-2">
+                <span id="dayThree"></span>
+                <img src="images/sunny.png" alt="day3" id="dayThreeImg" /><span
+                  id="dayThreeTemp"
+                  >75°</span
+                >
+              </div>
+              <div class="col-2">
+                <span id="dayFour"></span
+                ><img src="images/sunny.png" alt="day4" id="dayFourImg" /><span
+                  id="dayFourTemp"
+                  >75°</span
+                >
+              </div>
+              <div class="col-2">
+                <span id="dayFive"></span
+                ><img src="images/sunny.png" alt="day5" id="dayFiveImg" /><span
+                  id="dayFiveTemp"
+                  >75°</span
+                >
+              </div>
+              <div class="col-2">
+                <span id="daySix"></span
+                ><img src="images/sunny.png" alt="day6" id="daySixImg" /><span
+                  id="daySixTemp"
+                  >75°</span
+                >
+              </div>
             </div>
           </div>
         </div>

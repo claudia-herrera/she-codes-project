@@ -4,10 +4,18 @@
   padding: 20px;
   border: 1px solid #000000;
   border-radius: 10px;
+  background-image: url("images/daytimeBackground.jpeg");
 }
 .weather-app-wrapper {
   max-width: 600px;
   margin: 30px auto;
+}
+
+.transbox {
+  background-color: #ffffff;
+  border-radius: 10px;
+  opacity: 0.6;
+  padding: 20px;
 }
 
 .current-weather {
@@ -30,10 +38,25 @@
   top: -34px;
 }
 
+.btn {
+  background-color: #709fb0;
+  border: #709fb0;
+}
+.tempDetails {
+  border-left: 1px solid black;
+}
+.forecastHeader {
+  margin-top: 15px;
+  font-size: 20px;
+  color: #000000;
+  line-height: 28px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
 .daily-forecast {
   text-align: center;
   margin-top: 15px;
-  font-weight: 200;
+  font-weight: 300;
 }
 .daily-forecast img {
   height: 64px;
@@ -44,15 +67,17 @@ body {
   font-family: "Noto Sans KR", sans-serif;
 }
 h1 {
-  font-size: 24px;
+  font-size: 45px;
   color: #000000;
   line-height: 28px;
   font-weight: 500;
   text-transform: capitalize;
+  padding-bottom: 5px;
 }
 
 ul {
   margin: 0;
+  margin-top: 5px;
   padding: 0;
 }
 
